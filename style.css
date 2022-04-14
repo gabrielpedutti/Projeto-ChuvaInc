@@ -1063,6 +1063,34 @@ footer img {
 @media (max-width: 375px){
   .image > img,
   .containerVideoAside .image {
+    width: 360px;
+    height: auto;
+  }
+
+  .containerVideo .videoTitle,
+  .containerVideo h3,
+  .containerVideo p {
+    font-size: 80%;
+  }
+
+  .gridVideo img {
+    width: 50px;
+  }
+
+  .containerVideo .image::before {
+    height: 97.5%;
+  }
+
+  .container .gridVideo {
+    position: absolute;
+    top: 8.875rem;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 320px){
+  .image > img,
+  .containerVideoAside .image {
     width: 310px;
     height: auto;
   }
