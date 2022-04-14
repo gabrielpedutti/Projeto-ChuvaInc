@@ -1053,14 +1053,12 @@ footer img {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 425px){
   .containerTitle p,
   .containerTitle small {
     font-size: 9px;
   }
-}
 
-@media (max-width: 375px){
   .image > img,
   .containerVideoAside .image {
     width: 360px;
@@ -1088,7 +1086,7 @@ footer img {
   }
 }
 
-@media (max-width: 320px){
+@media (max-width: 375px){
   .image > img,
   .containerVideoAside .image {
     width: 310px;
