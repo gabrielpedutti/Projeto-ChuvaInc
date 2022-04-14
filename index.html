@@ -19,34 +19,25 @@
   </head>
   <body>
     <div class="containerNav">
-      <nav>
-        <div class="headerNav">
-          <h1>SLACA 2019</h1>
+      <nav class="menu">
+        <div class="innerContainerNav">
+          <div class="headerNav">
+            <h1>SLACA 2019</h1>
+          </div>
+          <img
+            src="Assets/logo.png"
+            alt="Logo Slaca 2019. Apresenta uma laranja desenhada pela metade, sendo metade o globo terrestre e a outra metade poligonos no formato de meio circulo. Abaixo apresenta o texto 13 Slaca."
+          />
+          <ul>
+            <li><a href="#">Apresentação</a></li>
+            <li><a href="#">Comitês</a></li>
+            <li><a href="#">Autores</a></li>
+            <li><a href="#">Eixos temáticos</a></li>
+            <li><a href="#">Trabalhos</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
         </div>
-        <img
-          src="Assets/logo.png"
-          alt="Logo Slaca 2019. Apresenta uma laranja desenhada pela metade, sendo metade o globo terrestre e a outra metade poligonos no formato de meio circulo. Abaixo apresenta o texto 13 Slaca."
-        />
-        <ul>
-          <li><a href="#">Apresentação</a></li>
-          <li><a href="#">Comitês</a></li>
-          <li><a href="#">Autores</a></li>
-          <li><a href="#">Eixos temáticos</a></li>
-          <li><a href="#">Trabalhos</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="container">
-      <header class="header">
-        <div class="containerTitle">
-          <p>Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
-          <h2>
-            Anais do 13º Simpósio Latino Americano de Ciência de Alimentos
-          </h2>
-          <small>ISSN: 1234-5678</small>
-        </div>
-        <div class="containerTest">
+        <div class="containerLanguageUser nav">
           <div class="language">
             <i class="fa-solid fa-globe"></i>
             <select name="language">
@@ -65,6 +56,41 @@
             </div>
           </div>
         </div>
+      </nav>
+    </div>
+    <div class="container">
+      <header class="header">
+        <div class="hamburgerDiv">
+          <img src="Assets/iconMenu.png" alt="Icone Menu">
+        </div>
+        <div class="headerBox">
+          <div class="containerTitle">
+            <p>Anais do Simpósio Latino Americano de Ciências de Alimentos</p>
+            <h2>
+              Anais do 13º Simpósio Latino Americano de Ciência de Alimentos
+            </h2>
+            <small>ISSN: 1234-5678</small>
+          </div>
+          <div class="containerLanguageUser">
+            <div class="language">
+              <i class="fa-solid fa-globe"></i>
+              <select name="language">
+                <option value="pt-br">
+                  <i class="fa-solid fa-globe"></i>
+                  PT, BR
+                </option>
+                <option value="en">EN</option>
+              </select>
+            </div>
+            <div class="userArea">
+              <p>Bem vindo!</p>
+              <small>alguem12@galoascience.com</small>
+              <div class="photoPerfil">
+                <img src="Assets/image.png" alt="Foto Perfil" />
+              </div>
+            </div>
+          </div>
+        </div>
       </header>
       <main>
         <section class="firstSection">
@@ -73,18 +99,6 @@
               Análise sensorial de preparações funcionais desenvolvidas para
               escolares entre 09 e 15 anos, do município de Campinas/SP
             </h3>
-            <div class="buttons">
-              <button class="buttonAside downloadButton">
-                <img src="Assets/download.svg" alt="Icone Download" /> Download
-              </button>
-              <button class="buttonAside favoriteButton">
-                <img src="Assets/favorito.svg" alt="Icone Favorito" />
-              </button>
-              <button class="buttonAside doiButton">
-                <img src="Assets/doi.svg" alt="Icone Doi" />
-              </button>
-            </div>
-            <p>Como citar esse trabalho?</p>
           </div>
           <div class="containerVideoAside">
             <div class="containerVideo">
@@ -104,46 +118,60 @@
                 </div>
               </div>
             </div>
-            <aside>
-              <div class="containerAside">
-                <div class="headerAside">
-                  <h4>Detalhes</h4>
-                </div>
-                <div class="innerContainer">
-                  <div class="descricao">
-                    <p>Tipo de Apresentação: <strong>Pôster</strong></p>
-                    <p>
-                      Eixo temático: <strong>Alimentação e saúde (AS)</strong>
-                    </p>
-                    <p>
-                      Palavras-chaves:
-                      <strong
-                        >Alimentos funcionais, alimentação escolar.</strong
-                      >
-                    </p>
-                  </div>
-                  <div class="authors">
-                    <p><strong>Autores:</strong></p>
-                    <ul>
-                      <li>Galileo Galilei¹</li>
-                      <li>Berta Lange de Morretes²</li>
-                      <li>Isaac Newton³</li>
-                      <li>Cesar Lattes¹</li>
-                      <li>Stephen Hawking⁴</li>
-                    </ul>
-                  </div>
-                  <small>
-                    <ul>
-                      <li>¹Universidade Estadual de Campinas</li>
-                      <li>²Universidade de São Paulo</li>
-                      <li>³Instituto Nacional de Pesquisas Espaciais</li>
-                      <li>⁴Universidade Federal do Rio de Janeiro</li>
-                    </ul>
-                  </small>
-                </div>
-              </div>
-            </aside>
           </div>
+          <div class="headerAside">
+            <div class="buttons">
+              <button class="buttonAside downloadButton">
+                <img src="Assets/download.svg" alt="Icone Download" /> Download
+              </button>
+              <button class="buttonAside favoriteButton">
+                <img src="Assets/favorito.svg" alt="Icone Favorito" />
+              </button>
+              <button class="buttonAside doiButton">
+                <img src="Assets/doi.svg" alt="Icone Doi" />
+              </button>
+            </div>
+            <p>Como citar esse trabalho?</p>
+          </div>
+          <aside>
+            <div class="containerAside">
+              <div class="innerHeaderAside">
+                <h4>Detalhes</h4>
+              </div>
+              <div class="innerContainer">
+                <div class="descricao">
+                  <p>Tipo de Apresentação: <strong>Pôster</strong></p>
+                  <p>
+                    Eixo temático: <strong>Alimentação e saúde (AS)</strong>
+                  </p>
+                  <p>
+                    Palavras-chaves:
+                    <strong
+                      >Alimentos funcionais, alimentação escolar.</strong
+                    >
+                  </p>
+                </div>
+                <div class="authors">
+                  <p><strong>Autores:</strong></p>
+                  <ul>
+                    <li>Galileo Galilei¹</li>
+                    <li>Berta Lange de Morretes²</li>
+                    <li>Isaac Newton³</li>
+                    <li>Cesar Lattes¹</li>
+                    <li>Stephen Hawking⁴</li>
+                  </ul>
+                </div>
+                <small>
+                  <ul>
+                    <li>¹Universidade Estadual de Campinas</li>
+                    <li>²Universidade de São Paulo</li>
+                    <li>³Instituto Nacional de Pesquisas Espaciais</li>
+                    <li>⁴Universidade Federal do Rio de Janeiro</li>
+                  </ul>
+                </small>
+              </div>
+            </div>
+          </aside>
         </section>
 
         <section class="section">

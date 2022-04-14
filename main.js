@@ -12,6 +12,9 @@ const headerSection3 = document.querySelector('.headerSection3.info');
 const buttonNewTopic = document.querySelector('.topicButton');
 const newTopicDoneAll = document.querySelectorAll('.newTopicDone');
 const buttonSubmit = document.querySelector('.buttonSubmit')
+const menuButton = document.querySelector('.hamburgerDiv');
+const menu = document.querySelector('.menu');
+
 
 seeMore.addEventListener("click", () => {
   more.style.display = "inline";
@@ -64,4 +67,8 @@ buttonSubmit.addEventListener("click", () => {
   buttonNewTopic.innerHTML = "criar novo tópico"
   buttonNewTopic.style.width = "14.69rem"
   buttonNewTopic.style.display = "block"
+})
+
+menuButton.addEventListener("click", () => {
+  menu.style.display = "block"
 })

@@ -57,15 +57,33 @@ nav ul li:hover {
   transition: background-color 0.3s;
 }
 
+.containerLanguageUser.nav {
+  display: none;
+}
+
 /* ======== Header Principal ========= */
+
+.hamburgerDiv {
+  display: none;
+  margin-right: 1rem;
+}
+
+.hamburgerDiv img {
+  width: 25px;
+}
 
 header {
   height: 4.25rem;
   width: auto;
   margin-left: 13.75rem;
-  display: flex;
+  display: grid;
+  align-items: center;
   background: #fdf1eb;
   padding: 0.312rem 0 0.25rem 2.25rem;
+}
+
+.headerBox {
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -86,7 +104,7 @@ header {
   font-size: 0.875rem;
 }
 
-.containerTest {
+.containerLanguageUser {
   display: flex;
 }
 
@@ -174,14 +192,17 @@ main {
 }
 
 /* ======== Section 1 ========= */
-
-.headerVideo {
+.firstSection {
   display: grid;
   grid-template:
-    'title buttons'
-    'title paragrafo';
-  grid-template-columns: 49rem 1fr;
-  margin-right: 2.81rem;
+    'headerVideo headerAside'
+    'video aside';
+  grid-template-columns: 3fr 1fr;
+}
+
+.headerVideo {
+  grid-area: headerVideo;
+  width: 49rem;
 }
 
 .headerVideo h3 {
@@ -190,15 +211,26 @@ main {
   font-weight: 900;
   font-size: 1.25rem;
   margin-bottom: 1.25rem;
-  grid-area: title;
 }
 
 .containerVideo {
   margin-right: 1.94rem;
-  /* width: 85rem; */
 }
 
-/* ======== Video ========= */
+.containerVideoAside {
+  grid-area: video;
+}
+
+.headerAside {
+  grid-area: headerAside;
+  margin-right: 2.81rem;
+}
+
+aside {
+  grid-area: aside;
+}
+
+/* ========= Video and Aside Header ========== */
 
 .containerVideoAside {
   display: flex;
@@ -209,16 +241,15 @@ aside {
   margin-right: 2.81rem;
 }
 
-.headerVideo .buttons {
+.headerAside .buttons {
   display: grid;
   grid-template: 'download favorite doi';
   gap: 0.31rem;
   grid-area: buttons;
   justify-content: right;
-  margin-left: 1.9rem;
 }
 
-.headerVideo .buttonAside {
+.headerAside .buttonAside {
   border: none;
   background-color: #ed7839;
   color: white;
@@ -226,32 +257,32 @@ aside {
   border-radius: 0.25rem;
 }
 
-.headerVideo .downloadButton {
+.headerAside .downloadButton {
   width: 7.5rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 1rem;
 }
 
-.headerVideo .favoriteButton {
+.headerAside .favoriteButton {
   width: 2.69rem;
 }
 
-.headerVideo .doiButton {
+.headerAside .doiButton {
   width: 2.69rem;
 }
 
-.headerVideo .buttonAside:hover {
+.headerAside .buttonAside:hover {
   background-color: #ec9160;
   transition: 0.3s;
 }
 
-.headerVideo > p {
+.headerAside > p {
   color: #ed7839;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   text-align: right;
   text-transform: uppercase;
   margin-top: 0.75rem;
@@ -260,7 +291,7 @@ aside {
 
 .containerVideo .image {
   width: 49rem;
-  height: 27.437rem;
+  height: 27.22rem;
   position: relative;
 }
 
@@ -275,6 +306,8 @@ aside {
   z-index: 1;
   border-radius: 0.187rem;
 }
+
+/* ======== Video ========= */
 
 .containerVideo .videoTitle {
   color: white;
@@ -324,7 +357,7 @@ aside {
 
 /* ========================== */
 
-.headerAside {
+.innerHeaderAside {
   background-color: #fdf1eb;
   padding: 0.625rem 0.94rem;
   border: 1px solid #ececec;
@@ -702,7 +735,7 @@ aside h4 {
 /* ========== New Topic Done ========== */
 
 .headerSection3.newTopicDone,
-.containerTopic.newTopicDone  {
+.containerTopic.newTopicDone {
   display: none;
 }
 
@@ -787,4 +820,196 @@ footer img {
   width: calc(90vw - 13.5rem);
   height: auto;
   margin: 3.125rem 2.81rem 0 14.75rem;
+}
+
+@media (max-width: 1350px) {
+  :root {
+    font-size: 90%;
+  }
+  .firstSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .containerVideoAside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .firstSection .headerVideo {
+    width: auto;
+    margin: 0 2rem 0 0;
+  }
+
+  .image > img,
+  .containerVideoAside .image {
+    width: 700px;
+  }
+  .headerAside {
+    margin: 1rem 2.81rem 0 0;
+  }
+  aside {
+    margin: 0;
+    margin-right: 2.81rem;
+  }
+  .containerTitle h2 {
+    font-size: 16px;
+    line-height: 15px;
+  }
+
+  .containerTitle p,
+  .containerTitle small {
+    font-size: 12px;
+  }
+
+  .innerContainer {
+    height: 150px;
+  }
+
+  .innerContainer small {
+    margin-top: 20px;
+  }
+
+  footer img {
+    margin-left: 250px;
+  }
+}
+
+@media (max-width: 1024px) {
+  main {
+    margin-left: 2.81rem;
+  }
+
+  header {
+    display: flex;
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
+  footer {
+    padding: 0 0.5rem;
+  }
+
+  footer img {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .hamburgerDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .containerLanguageUser {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .containerLanguageUser.nav {
+    display: flex;
+  }
+
+  .containerLanguageUser.nav {
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 100%;
+  }
+
+  .containerLanguageUser.nav .language {
+    display: flex;
+    align-items: center;
+  }
+
+  .containerLanguageUser.nav select {
+    background-color: white;
+    font-size: 80%;
+  }
+
+  nav .innerContainerNav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav .headerNav {
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav ul li {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    nav .headerNav {
+      height: 100px;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .image > img,
+  .containerVideoAside .image {
+    width: 310px;
+    height: auto;
+  }
+  .headerVideo h3 {
+    font-size: 1rem;
+  }
+
+  .containerVideo .videoTitle,
+  .containerVideo h3,
+  .containerVideo p {
+    font-size: 80%;
+  }
+
+  .gridVideo img {
+    width: 50px;
+  }
+
+  .containerVideo .image::before {
+    height: 97%;
+  }
+
+  .containerVideo .videoTitle {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .container .gridVideo {
+    position: absolute;
+    top: 7.875rem;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .containerTitle p,
+  .containerTitle small {
+    font-size: 9px;
+  }
+}
+
+@media (max-height: 800px) {
+
 }
