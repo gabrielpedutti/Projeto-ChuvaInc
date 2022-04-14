@@ -30,6 +30,26 @@ h1 {
   color: white;
 }
 
+.closeMenuDiv {
+  display: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.closeMenuDiv:hover {
+  background-color: rgba(255, 255, 255, 0.308);
+  cursor: pointer;
+}
+
+.closeMenuDiv img {
+  width: 40px;
+}
+
 nav ul li {
   list-style: none;
   font-family: 'Quicksand', sans-serif;
@@ -65,7 +85,13 @@ nav ul li:hover {
 
 .hamburgerDiv {
   display: none;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.45rem;
+  border-radius: 10px;
+}
+
+.hamburgerDiv:hover {
+  background-color: #f7d0bd;
 }
 
 .hamburgerDiv img {
@@ -915,6 +941,14 @@ footer img {
     justify-content: center;
   }
 
+  nav .headerNav {
+    justify-content: space-around;
+  }
+
+  .closeMenuDiv {
+    display: block;
+  }
+
   .containerLanguageUser.nav {
     display: flex;
   }
@@ -954,20 +988,31 @@ footer img {
   nav ul li {
     font-size: 1.5rem;
     text-align: center;
+  }  
+}
+
+@media (max-width: 768px) {
+  nav .headerNav {
+    height: 100px;
   }
 
-  @media (max-width: 768px) {
-    nav .headerNav {
-      height: 100px;
-    }
-
-    h1 {
-      font-size: 3rem;
-    }
+  h1 {
+    font-size: 3rem;
   }
 }
 
 @media (max-width: 750px) {
+  main {
+    margin-left: 0.5rem;
+  }
+
+  .headerSection,
+  .containerSection,
+  .headerAside,
+  aside {
+    margin-right: 0.5rem;
+  }
+
   .image > img,
   .containerVideoAside .image {
     width: 310px;
@@ -991,6 +1036,10 @@ footer img {
     height: 97%;
   }
 
+  .containerVideo {
+    margin: 0;
+  }
+
   .containerVideo .videoTitle {
     top: 1rem;
     left: 1rem;
@@ -1008,8 +1057,4 @@ footer img {
   .containerTitle small {
     font-size: 9px;
   }
-}
-
-@media (max-height: 800px) {
-
 }

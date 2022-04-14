@@ -14,6 +14,7 @@ const newTopicDoneAll = document.querySelectorAll('.newTopicDone');
 const buttonSubmit = document.querySelector('.buttonSubmit')
 const menuButton = document.querySelector('.hamburgerDiv');
 const menu = document.querySelector('.menu');
+const closeMenu = document.querySelector('.closeMenuDiv');
 
 
 seeMore.addEventListener("click", () => {
@@ -71,4 +72,8 @@ buttonSubmit.addEventListener("click", () => {
 
 menuButton.addEventListener("click", () => {
   menu.style.display = "block"
+})
+
+closeMenu.addEventListener("click", () => {
+  menu.style.display = "none"
 })
