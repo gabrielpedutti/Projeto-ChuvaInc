@@ -1015,6 +1015,54 @@ footer img {
 
   .image > img,
   .containerVideoAside .image {
+    width: 410px;
+    height: auto;
+    margin-right: 0.5rem;
+  }
+  .headerVideo h3 {
+    font-size: 1.2rem;
+  }
+
+  .containerVideo .videoTitle,
+  .containerVideo h3,
+  .containerVideo p {
+    font-size: 90%;
+  }
+
+  .gridVideo img {
+    width: 60px;
+  }
+
+  .containerVideo .image::before {
+    height: 98%;
+  }
+
+  .containerVideo {
+    margin: 0;
+  }
+
+  .containerVideo .videoTitle {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .container .gridVideo {
+    position: absolute;
+    top: 9.875rem;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .containerTitle p,
+  .containerTitle small {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 375px){
+  .image > img,
+  .containerVideoAside .image {
     width: 310px;
     height: auto;
   }
@@ -1049,12 +1097,5 @@ footer img {
     position: absolute;
     top: 7.875rem;
     left: 1rem;
-  }
-}
-
-@media (max-width: 425px) {
-  .containerTitle p,
-  .containerTitle small {
-    font-size: 9px;
   }
 }
